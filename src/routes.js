@@ -1,14 +1,8 @@
 const {
-  addBook, getBooks, getBook, editBook, deleteBook
-} = require('./handler') 
+  addBook, getBooks, getBook, editBook, deleteBook,
+} = require('./handler');
 
 const routes = [
-  {
-    method: 'GET',
-    path: '/',
-    handler: (request, h) => {
-      return `Health Check ${new Date()}`;
-  }},
   {
     method: 'POST',
     path: '/books',
@@ -33,7 +27,7 @@ const routes = [
     method: 'DELETE',
     path: '/books/{bookId}',
     handler: deleteBook,
-  } 
+  },
 ];
 
 module.exports = routes;
